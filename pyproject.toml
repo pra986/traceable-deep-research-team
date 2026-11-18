@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traceable-deep-research-team"
+version = "0.1.0"
+description = "Project 19: Async multi-agent deep research pipeline with semaphore-bounded search, verbatim URL/excerpt preservation, and decoupled email delivery."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "openai-agents>=0.0.14",
+    "pydantic>=2.7.0",
+    "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.6",
+    "ruff>=0.4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["deep_research*"]
