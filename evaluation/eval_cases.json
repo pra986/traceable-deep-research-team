@@ -1,0 +1,30 @@
+[
+  {
+    "id": "eval_01_partial_search_failure",
+    "query": "AI agent adoption in equity research 2026",
+    "max_concurrency": 2,
+    "expected_controls": [
+      "semaphore_concurrency_bounded",
+      "partial_search_failure_survival",
+      "verbatim_url_preservation"
+    ]
+  },
+  {
+    "id": "eval_02_citation_verification",
+    "query": "Federal Reserve liquidity facilities and treasury market structure",
+    "max_concurrency": 3,
+    "expected_controls": [
+      "unretrieved_url_citation_rejection",
+      "verbatim_excerpt_preservation"
+    ]
+  },
+  {
+    "id": "eval_03_decoupled_email_delivery",
+    "query": "Multi-agent orchestration reliability patterns",
+    "max_concurrency": 3,
+    "expected_controls": [
+      "email_failure_report_survival",
+      "non_blocking_delivery"
+    ]
+  }
+]
